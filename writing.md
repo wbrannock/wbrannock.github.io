@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Writing
-description: Thoughts on software, research, and other topics.
+description: Thoughts on AI, basketball, and other stuff.
 permalink: /writing/
 ---
 
