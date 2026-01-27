@@ -1,0 +1,127 @@
+// Footnote references (superscript links in text)
+.footnote {
+  font-size: 0.75em;
+  font-weight: 600;
+  text-decoration: none;
+  vertical-align: super;
+  line-height: 0;
+  margin-left: 0.1em;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Footnotes section at bottom of post
+.footnotes {
+  margin-top: $spacing-unit * 3;
+  padding-top: $spacing-unit * 1.5;
+  border-top: 1px solid var(--border-color);
+  font-size: $font-size-small;
+  color: var(--text-secondary);
+
+  ol {
+    padding-left: $spacing-unit * 1.5;
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-bottom: $spacing-unit * 0.5;
+
+    &:target {
+      background-color: var(--bg-secondary);
+      border-radius: 4px;
+      padding: $spacing-unit * 0.25;
+      margin-left: -$spacing-unit * 0.25;
+    }
+
+    p {
+      display: inline;
+      margin-bottom: 0;
+    }
+  }
+
+  // Back arrow link
+  .reversefootnote {
+    margin-left: $spacing-unit * 0.25;
+    text-decoration: none;
+    color: var(--text-muted);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+// Tooltip styling
+.footnote-tooltip {
+  position: absolute;
+  z-index: 1000;
+  max-width: 320px;
+  padding: $spacing-unit * 0.75;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: $font-size-small;
+  line-height: 1.5;
+  color: var(--text-primary);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-fast, visibility $transition-fast;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // Arrow pointing to reference
+  &::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 16px;
+    border: 6px solid transparent;
+    border-bottom-color: var(--border-color);
+    border-top: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 17px;
+    border: 5px solid transparent;
+    border-bottom-color: var(--bg-secondary);
+    border-top: none;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  code {
+    font-size: 0.9em;
+  }
+}
+
+// Dark theme shadow adjustment
+[data-theme="dark"] .footnote-tooltip {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+// Highlight footnote reference when targeted
+sup[id^="fnref"]:target a {
+  background-color: var(--bg-secondary);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+// Responsive adjustments
+@media (max-width: 600px) {
+  .footnote-tooltip {
+    max-width: calc(100vw - #{$spacing-unit * 2});
+    left: $spacing-unit !important;
+    right: $spacing-unit !important;
+  }
+}

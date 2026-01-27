@@ -1,0 +1,122 @@
+<script>
+(function() {
+  'use strict';
+
+  var tooltip = null;
+  var hideTimeout = null;
+
+  function init() {
+    var footnoteRefs = document.querySelectorAll('a.footnote');
+    if (footnoteRefs.length === 0) return;
+
+    // Create tooltip element
+    tooltip = document.createElement('div');
+    tooltip.className = 'footnote-tooltip';
+    tooltip.setAttribute('role', 'tooltip');
+    document.body.appendChild(tooltip);
+
+    // Attach event listeners
+    footnoteRefs.forEach(function(ref) {
+      ref.addEventListener('mouseenter', handleMouseEnter);
+      ref.addEventListener('mouseleave', handleMouseLeave);
+      ref.addEventListener('focus', handleMouseEnter);
+      ref.addEventListener('blur', handleMouseLeave);
+    });
+
+    // Hide tooltip on scroll
+    window.addEventListener('scroll', function() {
+      if (tooltip.classList.contains('visible')) {
+        hideTooltip();
+      }
+    });
+
+    // Hide tooltip on escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        hideTooltip();
+      }
+    });
+
+    // Smooth scroll for footnote links
+    document.querySelectorAll('a.footnote, a.reversefootnote').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var targetId = this.getAttribute('href').substring(1);
+        var target = document.getElementById(targetId);
+        if (target) {
+          hideTooltip();
+          var header = document.querySelector('.site-header');
+          var headerOffset = header ? header.offsetHeight + 16 : 80;
+          var elementPosition = target.getBoundingClientRect().top;
+          var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+          history.pushState(null, '', '#' + targetId);
+        }
+      });
+    });
+  }
+
+  function handleMouseEnter(e) {
+    clearTimeout(hideTimeout);
+    var ref = e.currentTarget;
+    var href = ref.getAttribute('href');
+    if (!href) return;
+
+    var footnoteId = href.substring(1);
+    var footnoteElement = document.getElementById(footnoteId);
+    if (!footnoteElement) return;
+
+    // Get footnote content (excluding backlink)
+    var content = footnoteElement.cloneNode(true);
+    var backlink = content.querySelector('.reversefootnote');
+    if (backlink) backlink.remove();
+
+    tooltip.innerHTML = content.innerHTML;
+    requestAnimationFrame(function() {
+      positionTooltip(ref);
+      tooltip.classList.add('visible');
+    });
+  }
+
+  function handleMouseLeave() {
+    hideTimeout = setTimeout(hideTooltip, 100);
+  }
+
+  function hideTooltip() {
+    if (tooltip) {
+      tooltip.classList.remove('visible');
+    }
+  }
+
+  function positionTooltip(ref) {
+    var rect = ref.getBoundingClientRect();
+    var tooltipRect = tooltip.getBoundingClientRect();
+
+    // Position below the reference
+    var left = rect.left + (rect.width / 2) - 20;
+    var top = rect.bottom + window.scrollY + 8;
+
+    // Keep within viewport horizontally
+    var maxLeft = window.innerWidth - tooltipRect.width - 16;
+    left = Math.max(16, Math.min(left, maxLeft));
+
+    // If tooltip would go below viewport, position above
+    if (rect.bottom + tooltipRect.height + 16 > window.innerHeight) {
+      top = rect.top + window.scrollY - tooltipRect.height - 8;
+    }
+
+    tooltip.style.left = left + 'px';
+    tooltip.style.top = top + 'px';
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>

@@ -1,0 +1,57 @@
+# Site settings
+title: William Brannock
+description: Personal blog and projects
+url: "" # Set to your GitHub Pages URL, e.g., https://username.github.io
+baseurl: "" # Leave empty if using root domain
+
+# Author
+author:
+  name: William Brannock
+  email: your@email.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: mathjax
+  footnote_backlink: '&#8617;'
+
+# Excerpt settings
+excerpt_separator: <!--more-->
+
+# Permalink structure
+permalink: /writing/:title/
+
+# Plugins (all GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

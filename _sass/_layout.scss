@@ -1,0 +1,39 @@
+// Container
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit * 1.5;
+  width: 100%;
+}
+
+// Main content
+main.container {
+  flex: 1;
+  padding-top: $spacing-unit * 2;
+  padding-bottom: $spacing-unit * 4;
+}
+
+// Page layout
+.page-header {
+  margin-bottom: $spacing-unit * 2;
+}
+
+.page-title {
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+.page-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+// Section spacing
+.section {
+  margin-bottom: $spacing-unit * 3;
+}
+
+.section-title {
+  margin-bottom: $spacing-unit;
+  padding-bottom: $spacing-unit * 0.5;
+  border-bottom: 1px solid var(--border-color);
+}

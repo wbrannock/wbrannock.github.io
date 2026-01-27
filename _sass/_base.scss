@@ -1,0 +1,134 @@
+// Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Base styles
+html {
+  font-size: $font-size-base;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: background-color $transition-base, color $transition-base;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  line-height: $line-height-heading;
+  font-weight: 600;
+  margin-bottom: $spacing-unit;
+  color: var(--text-primary);
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; margin-top: $spacing-unit * 2; }
+h3 { font-size: $font-size-h3; margin-top: $spacing-unit * 1.5; }
+
+p {
+  margin-bottom: $spacing-unit;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: var(--accent-hover);
+  }
+}
+
+// Lists
+ul, ol {
+  margin-bottom: $spacing-unit;
+  padding-left: $spacing-unit * 1.5;
+}
+
+li {
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+// Code
+code {
+  font-family: $font-family-mono;
+  font-size: 0.9em;
+  background-color: var(--bg-code);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  color: var(--code-text);
+}
+
+pre {
+  font-family: $font-family-mono;
+  font-size: $font-size-small;
+  background-color: var(--bg-code);
+  padding: $spacing-unit;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: $spacing-unit;
+
+  code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+// Blockquotes
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: $spacing-unit;
+  margin: $spacing-unit 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+// Horizontal rule
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: $spacing-unit * 2 0;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Tables
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: $spacing-unit;
+}
+
+th, td {
+  padding: $spacing-unit * 0.5;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+th {
+  background-color: var(--bg-secondary);
+  font-weight: 600;
+}
+
+// Selection
+::selection {
+  background-color: var(--accent);
+  color: white;
+}

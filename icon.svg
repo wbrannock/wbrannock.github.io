@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: orange rounded square -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#F97316"/>
+  <!-- Data-science glyph: simple network graph (three nodes + connecting edges) -->
+  <g stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Edges -->
+    <line x1="22" y1="42" x2="42" y2="22"/>
+    <line x1="22" y1="42" x2="46" y2="42"/>
+    <line x1="42" y1="22" x2="46" y2="42"/>
+    <!-- Nodes -->
+    <circle cx="22" cy="42" r="4" fill="white" stroke="white"/>
+    <circle cx="42" cy="22" r="4" fill="white" stroke="white"/>
+    <circle cx="46" cy="42" r="4" fill="white" stroke="white"/>
+  </g>
+  <!-- Optional subtle inner shadow / border for crispness at small sizes -->
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="white" stroke-opacity="0.06" stroke-width="2"/>
+</svg>

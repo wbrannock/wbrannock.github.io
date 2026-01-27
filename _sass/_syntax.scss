@@ -1,0 +1,57 @@
+// Rouge syntax highlighting
+// Compatible with both light and dark themes
+
+.highlight {
+  background-color: var(--bg-code);
+  border-radius: 6px;
+  margin-bottom: $spacing-unit;
+
+  pre {
+    margin: 0;
+    padding: $spacing-unit;
+  }
+
+  // Line numbers
+  .lineno {
+    color: var(--text-muted);
+    margin-right: $spacing-unit;
+    user-select: none;
+  }
+}
+
+// Light theme syntax colors
+:root,
+[data-theme="light"] {
+  .highlight {
+    .c, .cm, .c1, .cs { color: #6a737d; } // Comments
+    .k, .kc, .kd, .kn, .kp, .kr, .kt { color: #d73a49; } // Keywords
+    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #032f62; } // Strings
+    .n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nt, .nv { color: #24292e; } // Names
+    .o, .ow { color: #d73a49; } // Operators
+    .p { color: #24292e; } // Punctuation
+    .m, .mf, .mh, .mi, .il, .mo, .mb, .mx { color: #005cc5; } // Numbers
+    .cp, .cpf { color: #6a737d; } // Preprocessor
+    .gd { color: #b31d28; background-color: #ffeef0; } // Diff deleted
+    .gi { color: #22863a; background-color: #f0fff4; } // Diff inserted
+    .gh { color: #005cc5; font-weight: bold; } // Diff header
+    .gu { color: #6f42c1; } // Diff position
+  }
+}
+
+// Dark theme syntax colors
+[data-theme="dark"] {
+  .highlight {
+    .c, .cm, .c1, .cs { color: #8b949e; } // Comments
+    .k, .kc, .kd, .kn, .kp, .kr, .kt { color: #ff7b72; } // Keywords
+    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #a5d6ff; } // Strings
+    .n, .na, .nb, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .nt, .nv { color: #c9d1d9; } // Names
+    .o, .ow { color: #ff7b72; } // Operators
+    .p { color: #c9d1d9; } // Punctuation
+    .m, .mf, .mh, .mi, .il, .mo, .mb, .mx { color: #79c0ff; } // Numbers
+    .cp, .cpf { color: #8b949e; } // Preprocessor
+    .gd { color: #ffa198; background-color: #490202; } // Diff deleted
+    .gi { color: #7ee787; background-color: #04260f; } // Diff inserted
+    .gh { color: #79c0ff; font-weight: bold; } // Diff header
+    .gu { color: #d2a8ff; } // Diff position
+  }
+}
