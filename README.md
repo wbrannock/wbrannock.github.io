@@ -1,6 +1,6 @@
-# Personal Blog
+# William Brannock's Personal Site
 
-A minimalist personal blog built with Jekyll and designed for GitHub Pages deployment.
+Source code for my personal website and blog. Built with Jekyll and deployed on GitHub Pages.
 
 ## Features
 
@@ -48,78 +48,16 @@ bundle install
 bundle exec jekyll serve
 ```
 
-## Deployment to GitHub Pages
+## Deployment
 
-### Option 1: User/Organization Site (username.github.io)
+Deployed via GitHub Pages. Pushing to `main` triggers an automatic build and deploy.
 
-1. Create a repository named `username.github.io`
-2. Push this code to the `main` branch
-3. Go to **Settings > Pages**
-4. Source should automatically be set to deploy from `main` branch
-5. Site will be live at `https://username.github.io`
+## Configuration
 
-### Option 2: Project Site (username.github.io/repo-name)
-
-1. Create a repository with any name
-2. Push this code to the `main` branch
-3. Go to **Settings > Pages**
-4. Set source to `main` branch
-5. Update `_config.yml`:
-   ```yaml
-   baseurl: "/repo-name"
-   url: "https://username.github.io"
-   ```
-6. Site will be live at `https://username.github.io/repo-name`
-
-### Deploying
-
-```bash
-git add .
-git commit -m "Initial blog setup"
-git remote add origin git@github.com:username/repo-name.git
-git push -u origin main
-```
-
-GitHub Pages will automatically build and deploy your site.
-
-## Customization
-
-### Site Settings
-
-Edit `_config.yml`:
-
-```yaml
-title: Your Name
-description: Your site description
-author:
-  name: Your Name
-  email: your@email.com
-```
-
-### Navigation
-
-Edit `_data/navigation.yml`:
-
-```yaml
-- title: About
-  url: /
-- title: Writing
-  url: /writing/
-- title: Projects
-  url: /projects/
-```
-
-### Social Links
-
-Edit `_data/social.yml` with your profiles.
-
-### Colors
-
-Edit `_sass/_variables.scss`:
-
-```scss
-$accent: #F84C1E;  // Change the accent color
-```
+- **Site settings**: `_config.yml`
+- **Navigation**: `_data/navigation.yml`
+- **Social links**: `_data/social.yml`
+- **Colors**: `_sass/_variables.scss` (accent color, etc.)
 
 ## Writing Posts
 
@@ -163,5 +101,4 @@ $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
 ```
 
 ## License
-
-MIT
+None. Feel free to use this as a starter for your own site if you want too. 
