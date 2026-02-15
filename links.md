@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Links
-description: A repository of link I find interesting. I try to only add stuff I think is in the >=95th percentile for value added.
+description: A repository of link I find interesting. I try to only add stuff I think is in the 95th+ percentile for value added.
 permalink: /links/
 ---
 
