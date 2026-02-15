@@ -1,0 +1,72 @@
+// Links filter
+.links-filter {
+  margin-bottom: $spacing-unit * 2;
+  display: flex;
+  align-items: center;
+  gap: $spacing-unit * 0.75;
+}
+
+.filter-label {
+  font-size: $font-size-small;
+  color: var(--text-muted);
+}
+
+.filter-select {
+  font-family: $font-family-base;
+  font-size: $font-size-small;
+  padding: $spacing-unit * 0.35 $spacing-unit * 0.75;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color $transition-fast;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent);
+    outline: none;
+  }
+}
+
+// Link list
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+
+.link-item {
+  margin-bottom: $spacing-unit * 1.5;
+  padding-bottom: $spacing-unit * 1.5;
+  border-bottom: 1px solid var(--border-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.link-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: var(--text-primary);
+    }
+  }
+}
+
+.link-meta {
+  color: var(--text-muted);
+  font-size: $font-size-small;
+  margin-top: $spacing-unit * 0.25;
+}
+
+.link-description {
+  color: var(--text-secondary);
+  margin-top: $spacing-unit * 0.5;
+}

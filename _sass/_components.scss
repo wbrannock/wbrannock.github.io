@@ -161,6 +161,13 @@
   font-size: $font-size-small;
 }
 
+.post-updated {
+  display: block;
+  color: var(--text-muted);
+  font-size: $font-size-small;
+  margin-top: $spacing-unit * 0.25;
+}
+
 .post-content {
   h2, h3, h4 {
     margin-top: $spacing-unit * 2;
