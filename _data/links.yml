@@ -3,6 +3,16 @@
   description: "An interesting look at how persona drift can change the behavior and self-identity of LLMs."
   date: 2026-02-04
 
+- title: "Machine Learning in Production (CMU)"
+  url: "https://mlip-cmu.github.io/book/index.html"
+  description: "An online textbook for CMU's MLOps course covering the engineering practices needed to build and deploy ML systems in production."
+  date: 2026-03-02
+
+- title: "ARENA (Alignment Research Engineer Accelerator)"
+  url: "https://learn.arena.education/"
+  description: "A great way to learn the basics of mechanistic interpretability. Offers a structured AI safety curriculum covering transformer interpretability, deep learning fundamentals, and more."
+  date: 2026-03-02
+
 - title: "An Infinitely Large Napkin"
   url: "https://venhance.github.io/napkin/Napkin.pdf"
   description: "A useful introduction to many different math concepts. I found it most helpful for learning about some of the basic concepts in abstract algebra."
