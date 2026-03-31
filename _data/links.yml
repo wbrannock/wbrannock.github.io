@@ -18,6 +18,11 @@
   description: "An explanation of the fundamental matrix calculus concepts necessary for understanding how deep neural networks are trained."
   date: 2026-03-04
 
+- title: "Forecasting: Principles and Practice (Python)"
+  url: "https://otexts.com/fpppy/"
+  description: "The best resource I have found for learning forecasting using Python."
+  date: 2026-03-31
+
 - title: "An Infinitely Large Napkin"
   url: "https://venhance.github.io/napkin/Napkin.pdf"
   description: "A useful introduction to many different math concepts. I found it most helpful for learning about some of the basic concepts in abstract algebra."
