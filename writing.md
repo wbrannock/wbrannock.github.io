@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Writing
-description: Random thoughts
+quote: "The future is already here - it's just not evenly distributed."
+quote_attribution: William Gibson
 permalink: /writing/
 ---
 

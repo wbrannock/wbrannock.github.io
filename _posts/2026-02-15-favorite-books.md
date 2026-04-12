@@ -2,10 +2,10 @@
 layout: post
 title: "Books I Really Liked"
 date: 2026-02-15
-last_updated: 2026-02-15
+last_updated: 2026-04-12
 ---
 
-I try to add only books I believe are in the 95th+ percentile of things I've read. I try to come back and update this list occasionally as I read more and my tastes evolve.
+I try to come back and update this list occasionally.
 
 <!--more-->
 

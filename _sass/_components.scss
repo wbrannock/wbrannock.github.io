@@ -210,9 +210,20 @@
 
 // About / Homepage
 .about-section {
+  display: grid;
+  gap: $spacing-unit * 1.5;
+
   h2 {
     margin-top: $spacing-unit * 2;
     margin-bottom: $spacing-unit * 0.75;
+  }
+
+  h1,
+  h2,
+  p,
+  ul,
+  ol {
+    margin-bottom: 0;
   }
 
   p + p {
