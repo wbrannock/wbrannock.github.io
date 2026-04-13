@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Short Stories Worth Reading"
+title: "Short Stories I Really Liked"
 date: 2026-04-13
 last_updated: 2026-04-13
 ---
