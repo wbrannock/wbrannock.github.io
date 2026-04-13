@@ -7,15 +7,16 @@ title: null
 
 # About
 
-Hello! I'm **William Brannock** (I also go by Will), a graduate student currently studying machine learning and data science at the [University of Virginia](https://www.virginia.edu/). In particular, I'm interested in deep learning and trying to better understand how large language models reflect human values. 
+Hello! I'm **William (or Will) Brannock** , a graduate student currently studying machine learning and data science at the [University of Virginia](https://www.virginia.edu/). In particular, I'm interested in large language models and trying to measure how they align with human values. 
 
-Previously, I worked for 3 years trying to increase vaccination uptake in Virginia using data analytics and statistical modeling. Before that, I completed a B.S. in Systems Engineering from [Virginia Tech](https://www.vt.edu/). Outside of school and work, some of my hobbies include watching [college basketball](https://kenpom.com/), learning new things, and reading science fiction.
+Previously, I spent three years applying data analytics and statistical modeling to increase routine vaccination uptake across Virginia. Before that, I completed a B.S. in Systems Engineering from [Virginia Tech](https://www.vt.edu/). Outside of school and work, some of my hobbies include watching [college basketball](https://kenpom.com/), learning new things, and reading science fiction.
 
     
 ## Academic & Professional Interests
 
-- Deep Learning
+- Deep Learning, broadly construed
 - Large Language Models (LLMs)
+- Finetuning Model (SFT and GRPO)
 - ML/AI Interpretability
 - MLOps
 
